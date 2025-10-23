@@ -31,7 +31,7 @@ int main() {
     int n = 8;
     int el = 67;
 
-    int result = s1.binary(arr, n, el);  // Perform binary search
+    int result = s1.binary(arr, n, el);
 
     if (result != -1) {
         cout << "Element " << el << " found at index " << result << endl;
