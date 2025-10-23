@@ -11,17 +11,17 @@ public:
             int mid = low + (high - low) / 2;  
             
             if (arr[mid] == ele) {
-                return mid;  // Element found, return index
+                return mid; 
             }
             else if (ele < arr[mid]) {
-                high = mid - 1;  // Search left half
+                high = mid - 1; 
             }
             else {
-                low = mid + 1;  // Search right half
+                low = mid + 1;  
             }
         }
         
-        return -1;  // Element not found
+        return -1;  
     }
 };
 
