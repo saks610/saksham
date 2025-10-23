@@ -8,7 +8,7 @@ public:
         int high = n - 1;
         
         while (low <= high) {
-            int mid = low + (high - low) / 2;  // Correct mid calculation
+            int mid = low + (high - low) / 2;  
             
             if (arr[mid] == ele) {
                 return mid;  // Element found, return index
