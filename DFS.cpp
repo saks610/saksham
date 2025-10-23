@@ -3,8 +3,8 @@
 using namespace std;
 
 class Graph {
-    int V; // Number of vertices
-    vector<vector<int> > adj; // Adjacency list
+    int V;
+    vector<vector<int> > adj; 
 
 public:
     Graph(int V) {
@@ -15,11 +15,10 @@ public:
     // Function to add edge
     void addEdge(int u, int v) {
         adj[u].push_back(v);
-        // For undirected graph, also add:
-        // adj[v].push_back(u);
+        
     }
 
-    // DFS utility function
+   
     void DFSUtil(int v, vector<bool> &visited) {
         visited[v] = true;
         cout << v << " ";
@@ -32,7 +31,7 @@ public:
 
     }
 
-    // DFS traversal
+    
     void DFS(int start) {
         vector<bool> visited(V, false);
         cout << "DFS starting from node " << start << ":\n";
@@ -42,15 +41,14 @@ public:
 };
 
 int main() {
-    Graph g(5); // Create a graph with 5 vertices (0 to 4)
+    Graph g(5); 
 
     g.addEdge(0, 1);
     g.addEdge(0, 2);
     g.addEdge(1, 3);
     g.addEdge(1, 4);
-    g.addEdge(2, 4);
-
-    g.DFS(0); // Start DFS from node 0
+    g.addEdge(2, 4);
+    g.DFS(0); 
 
     return 0;
 }
